@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- SEO -->
+
+  <title>
+    星座占い｜無料占い｜月詠秘術
+  </title>
+
+  <meta
+    name="description"
+    content="12星座から今日の運勢を無料診断。恋愛運・金運・仕事運を神秘の星々が導きます。"
+  >
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- フォント -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- 背景霧 -->
+
+  <div class="fog"></div>
+
+  <!-- タイトル -->
+
+  <header>
+
+    <h1>
+      ⭐ 星座占い ⭐
+    </h1>
+
+    <p class="subtitle">
+      星々が導く今日の運命
+    </p>
+
+  </header>
+
+  <!-- 説明 -->
+
+  <section class="intro">
+
+    <h2>
+      星座の神託
+    </h2>
+
+    <p>
+
+      古来より星々は、
+      人々の運命を映す鏡として
+      語り継がれてきました。
+
+      <br><br>
+
+      あなたの星座に宿る力が、
+      今日の恋愛運・金運・仕事運を
+      静かに照らします。
+
+    </p>
+
+  </section>
+
+  <!-- 星座選択 -->
+
+  <section class="fortune-menu">
+
+    <div class="section-title">
+
+      <span>
+        ZODIAC FORTUNE
+      </span>
+
+      <h2>
+        ♈ 星座を選択 ♓
+      </h2>
+
+      <p>
+        あなたの星座を選んでください
+      </p>
+
+    </div>
+
+    <!-- 星座一覧 -->
+
+    <div class="zodiac-grid">
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('aries')"
+      >
+        ♈<br>
+        おひつじ座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('taurus')"
+      >
+        ♉<br>
+        おうし座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('gemini')"
+      >
+        ♊<br>
+        ふたご座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('cancer')"
+      >
+        ♋<br>
+        かに座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('leo')"
+      >
+        ♌<br>
+        しし座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('virgo')"
+      >
+        ♍<br>
+        おとめ座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('libra')"
+      >
+        ♎<br>
+        てんびん座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('scorpio')"
+      >
+        ♏<br>
+        さそり座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('sagittarius')"
+      >
+        ♐<br>
+        いて座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('capricorn')"
+      >
+        ♑<br>
+        やぎ座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('aquarius')"
+      >
+        ♒<br>
+        みずがめ座
+      </button>
+
+      <button
+        class="zodiac-btn"
+        onclick="showFortune('pisces')"
+      >
+        ♓<br>
+        うお座
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- 結果表示 -->
+
+  <section
+    id="zodiac-result"
+    class="fortune-box"
+    style="display:none;"
+  >
+
+    <h2 id="zodiac-name"></h2>
+
+    <p id="zodiac-main"></p>
+
+    <h3>
+      💖 恋愛運
+    </h3>
+
+    <p id="love"></p>
+
+    <h3>
+      💰 金運
+    </h3>
+
+    <p id="money"></p>
+
+    <h3>
+      💼 仕事運
+    </h3>
+
+    <p id="work"></p>
+
+    <h3>
+      🍀 ラッキーアクション
+    </h3>
+
+    <p id="action"></p>
+
+  </section>
+
+  <!-- 戻る -->
+
+  <div class="back-area">
+
+    <a
+      href="index.html"
+      class="back-btn"
+    >
+
+      ← TOPへ戻る
+
+    </a>
+
+  </div>
+
+  <!-- フッター -->
+
+  <footer class="site-footer">
+
+    <p>
+      © 月詠秘術
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+
+  <script src="zodiac.js"></script>
+
+</body>
+
+</html>
