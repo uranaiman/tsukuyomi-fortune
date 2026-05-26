@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    月の共鳴診断｜無料相性占い｜月詠秘術
+  </title>
+
+  <meta
+    name="description"
+    content="2人の生年月日から運命の相性を診断。月の共鳴による神秘の相性占い。"
+  >
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- フォント -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- 背景霧 -->
+
+  <div class="fog"></div>
+
+  <!-- タイトル -->
+
+  <header>
+
+    <h1>
+      💖 月の共鳴診断 💖
+    </h1>
+
+    <p class="subtitle">
+      2人の運命を月が読み解く
+    </p>
+
+  </header>
+
+  <!-- 説明 -->
+
+  <section class="intro">
+
+    <h2>
+      月の共鳴とは
+    </h2>
+
+    <p>
+
+      人はそれぞれ、
+      生まれた瞬間に
+      “月の波動” を宿しています。
+
+      <br><br>
+
+      2つの月が出会う時、
+      運命の共鳴が発生します。
+
+      <br><br>
+
+      あなた達の魂は、
+      どのような関係なのでしょうか。
+
+    </p>
+
+  </section>
+
+  <!-- 相性診断 -->
+
+  <section class="compatibility-section">
+
+    <h2>
+      🌙 生年月日を入力 🌙
+    </h2>
+
+    <p class="compatibility-text">
+
+      2人の生年月日を入力してください
+
+    </p>
+
+    <div class="compatibility-inputs">
+
+      <!-- あなた -->
+
+      <div>
+
+        <label
+          class="birth-label"
+          for="person1"
+        >
+
+          あなたの生年月日
+
+        </label>
+
+        <input
+          type="text"
+          id="person1"
+          placeholder="1999-01-01"
+          maxlength="10"
+          inputmode="numeric"
+          autocomplete="off"
+        >
+
+      </div>
+
+      <!-- 相手 -->
+
+      <div>
+
+        <label
+          class="birth-label"
+          for="person2"
+        >
+
+          相手の生年月日
+
+        </label>
+
+        <input
+          type="text"
+          id="person2"
+          placeholder="1999-01-01"
+          maxlength="10"
+          inputmode="numeric"
+          autocomplete="off"
+        >
+
+      </div>
+
+      <button onclick="checkCompatibility()">
+
+        共鳴を診断する
+
+      </button>
+
+    </div>
+
+    <!-- 結果 -->
+
+    <div id="compatibility-result"></div>
+
+  </section>
+
+  <!-- 戻る -->
+
+  <div class="back-area">
+
+    <a
+      href="index.html"
+      class="back-btn"
+    >
+
+      ← TOPへ戻る
+
+    </a>
+
+  </div>
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
