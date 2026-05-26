@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- SEO -->
+
+  <title>
+    月占い｜無料占い｜月詠秘術
+  </title>
+
+  <meta
+    name="description"
+    content="生年月日からあなたの月タイプと運命を診断する無料月占い。恋愛運・金運・仕事運を神秘の月が読み解きます。"
+  >
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- フォント -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body class="top-page">
+
+  <!-- 背景霧 -->
+
+  <div class="fog"></div>
+
+  <!-- ローディング -->
+
+  <div id="loading-screen">
+
+    <div class="loading-content">
+
+      <div class="loading-moon"></div>
+
+      <p>
+        🌙 月を読み解いています…
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- タイトル -->
+
+  <header>
+
+    <h1>
+      🌙 月占い 🌙
+    </h1>
+
+    <p class="subtitle">
+      あなたの運命を月が照らす
+    </p>
+
+  </header>
+
+  <!-- 説明 -->
+
+  <section class="intro">
+
+    <h2>
+      月詠秘術とは
+    </h2>
+
+    <p>
+
+      月詠秘術とは、
+
+      古代日本に伝わる
+      「月読信仰」と、
+
+      東洋陰陽思想を
+      融合させた神秘占術です。
+
+      <br><br>
+
+      人は生まれた瞬間に
+      “月の性質” を宿し、
+
+      月の巡りによって
+      運命の流れが変化すると
+      言われています。
+
+      <br><br>
+
+      あなたの内側に眠る
+      “真の月” を、
+      今宵呼び覚ましてください。
+
+    </p>
+
+  </section>
+
+  <!-- 入力 -->
+
+  <section class="input-section">
+
+    <label
+      class="birth-label"
+      for="birthday"
+    >
+
+      生年月日を入力してください
+
+    </label>
+
+    <input
+      type="text"
+      id="birthday"
+      inputmode="numeric"
+      autocomplete="off"
+      placeholder="1999-01-01"
+      maxlength="10"
+    >
+
+    <p id="error-message"></p>
+
+    <button onclick="goFortune()">
+
+      月の運命を占う
+
+    </button>
+
+  </section>
+
+  <!-- 月タイプ図鑑 -->
+
+  <section class="moon-book">
+
+    <h2>
+      🌙 月タイプ図鑑 🌙
+    </h2>
+
+    <div class="moon-grid">
+
+      <div class="moon-card">
+
+        <h3>
+          🌑 新月
+        </h3>
+
+        <p>
+          静寂と始まりを司る月。
+          内面に強い力を秘める。
+        </p>
+
+      </div>
+
+      <div class="moon-card">
+
+        <h3>
+          🌕 満月
+        </h3>
+
+        <p>
+          魅力と成功を照らす月。
+          人を惹きつける存在。
+        </p>
+
+      </div>
+
+      <div class="moon-card">
+
+        <h3>
+          🌌 蒼月
+        </h3>
+
+        <p>
+          知性と神秘を秘めた月。
+          冷静な観察者。
+        </p>
+
+      </div>
+
+      <div class="moon-card">
+
+        <h3>
+          🩸 紅月
+        </h3>
+
+        <p>
+          情熱と変化を象徴する月。
+          強い運命を持つ。
+        </p>
+
+      </div>
+
+      <div class="moon-card">
+
+        <h3>
+          ✨ 星月
+        </h3>
+
+        <p>
+          希望と幸運を呼ぶ月。
+          不思議な導きを持つ。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 戻る -->
+
+  <div class="back-area">
+
+    <a
+      href="index.html"
+      class="back-btn"
+    >
+
+      ← TOPへ戻る
+
+    </a>
+
+  </div>
+
+  <!-- フッター -->
+
+  <footer class="site-footer">
+
+    <p>
+      © 月詠秘術
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
