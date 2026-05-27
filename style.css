@@ -1214,3 +1214,166 @@ button:hover {
     font-size: 42px;
   }
 }
+
+/* =========================
+   タロット
+========================= */
+
+.tarot-section {
+
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 80px auto;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.tarot-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(90px, 1fr));
+
+  gap: 20px;
+
+  justify-items: center;
+}
+
+.tarot-card {
+
+  width: 90px;
+
+  height: 160px;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1a1035,
+      #3b136b
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.2);
+
+  box-shadow:
+    0 0 20px rgba(180,0,255,0.25);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.tarot-card:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.05);
+
+  box-shadow:
+    0 0 35px rgba(200,120,255,0.6);
+}
+
+.tarot-back {
+
+  font-size: 42px;
+}
+
+.tarot-front {
+
+  font-size: 54px;
+}
+
+.tarot-card.opened {
+
+  animation:
+    tarotOpen 0.6s;
+}
+
+.tarot-card.reversed .tarot-front {
+
+  transform:
+    rotate(180deg);
+}
+
+@keyframes tarotOpen {
+
+  0% {
+
+    transform:
+      rotateY(90deg);
+  }
+
+  100% {
+
+    transform:
+      rotateY(0deg);
+  }
+}
+
+.drawn-card {
+
+  font-size: 90px;
+
+  margin-bottom: 20px;
+
+  animation:
+    moonFloat 3s ease-in-out infinite;
+}
+
+#card-name {
+
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+#card-orientation {
+
+  font-size: 22px;
+
+  color: #f5d0fe;
+
+  margin-bottom: 20px;
+}
+
+/* スマホ */
+
+@media screen and (max-width: 768px) {
+
+  .tarot-grid {
+
+    grid-template-columns:
+      repeat(4, 1fr);
+
+    gap: 14px;
+  }
+
+  .tarot-card {
+
+    width: 72px;
+
+    height: 130px;
+  }
+
+  .tarot-front {
+
+    font-size: 42px;
+  }
+}

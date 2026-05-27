@@ -1,261 +1,305 @@
-// ========================================
-// タロットカード一覧
-// ========================================
-
 const tarotCards = [
 
   {
-
-    symbol: "🃏",
-
     name: "愚者",
-
-    main:
-      "新たな始まりの気配。恐れず進むことで運命が開かれます。",
-
-    love:
-      "新しい出会いの予感があります。",
-
-    work:
-      "挑戦することで未来が動き始めます。",
-
-    message:
-      "直感を信じて進んでください。"
+    symbol: "🃏",
+    message: "新しい旅立ちの時です。",
+    love: "自然体の恋が始まりそう。",
+    work: "新しい挑戦が運命を開く。",
+    money: "大胆な行動が金運UP。"
   },
 
   {
-
-    symbol: "✨",
-
     name: "魔術師",
-
-    main:
-      "あなたの才能が強く輝いています。行動が成功を引き寄せます。",
-
-    love:
-      "積極的な言葉が恋愛運を高めます。",
-
-    work:
-      "アイデアが高く評価される時です。",
-
-    message:
-      "今こそ力を解放する時です。"
+    symbol: "✨",
+    message: "才能が開花し始めています。",
+    love: "魅力が高まり注目されます。",
+    work: "能力が認められる時。",
+    money: "新しい収入源が見つかる。"
   },
 
   {
-
-    symbol: "🌙",
-
     name: "女教皇",
-
-    main:
-      "静かな知性と直感が未来を導いています。",
-
-    love:
-      "焦らず関係を深めることで良い流れになります。",
-
-    work:
-      "冷静な判断が成功を呼びます。",
-
-    message:
-      "静かな時間が答えを導きます。"
+    symbol: "🌙",
+    message: "冷静な判断が未来を導きます。",
+    love: "静かな愛が深まります。",
+    work: "知識が武器になります。",
+    money: "慎重な管理が吉。"
   },
 
   {
-
-    symbol: "☀️",
-
-    name: "太陽",
-
-    main:
-      "強い幸運があなたを照らしています。希望に満ちた流れです。",
-
-    love:
-      "魅力が高まり恋愛運が上昇しています。",
-
-    work:
-      "周囲から高い評価を得られるでしょう。",
-
-    message:
-      "自信を持って進んでください。"
+    name: "女帝",
+    symbol: "👑",
+    message: "豊かさが流れ込みます。",
+    love: "愛情運が高まっています。",
+    work: "人間関係が好転。",
+    money: "安定した運気。"
   },
 
   {
+    name: "皇帝",
+    symbol: "⚔️",
+    message: "強い意志が成功を導く。",
+    love: "頼もしさが魅力になる。",
+    work: "リーダー運上昇。",
+    money: "計画的行動で安定。"
+  },
 
-    symbol: "🌑",
+  {
+    name: "教皇",
+    symbol: "⛪",
+    message: "導きを受ける時です。",
+    love: "誠実な関係が育つ。",
+    work: "信頼が評価に変わる。",
+    money: "堅実運。"
+  },
 
+  {
+    name: "恋人",
+    symbol: "💖",
+    message: "大切な選択の時。",
+    love: "恋愛運最高潮。",
+    work: "良きパートナーに恵まれる。",
+    money: "人脈が金運を呼ぶ。"
+  },
+
+  {
+    name: "戦車",
+    symbol: "🏇",
+    message: "勢いが運命を動かす。",
+    love: "積極性が吉。",
+    work: "突き進むほど成功。",
+    money: "勝負運あり。"
+  },
+
+  {
+    name: "力",
+    symbol: "🦁",
+    message: "内なる強さを信じて。",
+    love: "優しさが絆を深める。",
+    work: "忍耐が成果を生む。",
+    money: "安定運。"
+  },
+
+  {
+    name: "隠者",
+    symbol: "🕯️",
+    message: "静かな時間が必要です。",
+    love: "焦らず距離を縮める時。",
+    work: "研究や学びに吉。",
+    money: "節約が運気UP。"
+  },
+
+  {
+    name: "運命の輪",
+    symbol: "🎡",
+    message: "運命が大きく動く。",
+    love: "偶然の出会いあり。",
+    work: "転機到来。",
+    money: "チャンス運上昇。"
+  },
+
+  {
+    name: "正義",
+    symbol: "⚖️",
+    message: "真実が明らかになる。",
+    love: "誠実さが鍵。",
+    work: "公平な評価。",
+    money: "冷静判断が重要。"
+  },
+
+  {
+    name: "吊るされた男",
+    symbol: "🔻",
+    message: "視点を変える時。",
+    love: "待つことで見える愛。",
+    work: "今は準備期間。",
+    money: "焦らない方が吉。"
+  },
+
+  {
+    name: "死神",
+    symbol: "💀",
+    message: "終わりと再生。",
+    love: "新しい恋への転換。",
+    work: "環境変化あり。",
+    money: "不要な出費を断つ時。"
+  },
+
+  {
+    name: "節制",
+    symbol: "🕊️",
+    message: "調和が運気を整える。",
+    love: "穏やかな関係へ。",
+    work: "協力で成功。",
+    money: "安定した流れ。"
+  },
+
+  {
+    name: "悪魔",
+    symbol: "😈",
+    message: "誘惑に注意。",
+    love: "執着しすぎに注意。",
+    work: "欲望が暴走しやすい。",
+    money: "浪費注意。"
+  },
+
+  {
+    name: "塔",
+    symbol: "⚡",
+    message: "突然の変化が訪れる。",
+    love: "価値観の変化。",
+    work: "大きな転機。",
+    money: "予想外の出費注意。"
+  },
+
+  {
+    name: "星",
+    symbol: "⭐",
+    message: "希望の光が差し込む。",
+    love: "理想的な出会い。",
+    work: "夢が現実へ近づく。",
+    money: "運気上昇。"
+  },
+
+  {
     name: "月",
+    symbol: "🌕",
+    message: "直感を信じてください。",
+    love: "神秘的な縁。",
+    work: "感性が武器になる。",
+    money: "不安に流されないこと。"
+  },
 
-    main:
-      "迷いや不安が浮かび上がる時。焦らず本音を見つめましょう。",
+  {
+    name: "太陽",
+    symbol: "☀️",
+    message: "最高の幸運期。",
+    love: "幸福な愛に包まれる。",
+    work: "成功運MAX。",
+    money: "豊かさが訪れる。"
+  },
 
-    love:
-      "感情に流されず冷静さを大切にしてください。",
+  {
+    name: "審判",
+    symbol: "📯",
+    message: "運命の目覚め。",
+    love: "復縁や再会運。",
+    work: "再挑戦が成功する。",
+    money: "停滞から回復。"
+  },
 
-    work:
-      "慎重な判断が重要になります。",
-
-    message:
-      "心の声に耳を傾けてください。"
+  {
+    name: "世界",
+    symbol: "🌍",
+    message: "完成と達成。",
+    love: "理想的な関係。",
+    work: "努力が実を結ぶ。",
+    money: "満たされた運気。"
   }
 
 ];
 
-// ========================================
-// カード生成
-// ========================================
-
 const tarotArea =
+  document.getElementById("tarot-cards");
 
-  document.getElementById(
-    "tarot-cards"
-  );
+let alreadySelected = false;
 
-// シャッフル
-
-const shuffled =
-
-  tarotCards.sort(
-    () => Math.random() - 0.5
-  );
-
-// カード生成
-
-shuffled.forEach(
-
-  (card, index) => {
-
-    tarotArea.innerHTML +=
-
-    `
-    <div
-      class="tarot-card"
-      onclick="selectCard(${index})"
-    >
-
-      <div class="tarot-back">
-
-        🌙
-
-      </div>
-
-    </div>
-    `;
-  }
-);
-
-// ========================================
-// カード選択
-// ========================================
-
-function selectCard(index) {
-
-  // カード取得
+for (let i = 0; i < 22; i++) {
 
   const card =
-    shuffled[index];
+    document.createElement("div");
 
-  // 全カード取得
+  card.className =
+    "tarot-card";
 
-  const allCards =
+  card.innerHTML =
+    `
+    <div class="tarot-back">
+      🌙
+    </div>
+    `;
 
-    document.querySelectorAll(
-      ".tarot-card"
-    );
+  card.onclick = () => {
 
-  // 一度全部無効化
+    if (alreadySelected) return;
 
-  allCards.forEach(
+    alreadySelected = true;
 
-    item => {
+    const random =
+      tarotCards[
+        Math.floor(
+          Math.random() *
+          tarotCards.length
+        )
+      ];
 
-      item.style.pointerEvents =
-        "none";
+    const reversed =
+      Math.random() < 0.5;
 
-      item.style.opacity =
-        "0.5";
+    card.classList.add("opened");
+
+    if (reversed) {
+
+      card.classList.add(
+        "reversed"
+      );
     }
-  );
 
-  // 選択カード強調
-
-  allCards[index].style.opacity =
-    "1";
-
-  allCards[index].style.transform =
-    "scale(1.05)";
-
-  // 結果表示
-
-  const result =
+    card.innerHTML =
+      `
+      <div class="tarot-front">
+        ${random.symbol}
+      </div>
+      `;
 
     document.getElementById(
       "tarot-result"
-    );
+    ).style.display = "block";
 
-  result.style.display =
-    "block";
+    document.getElementById(
+      "drawn-card"
+    ).innerHTML =
+      random.symbol;
 
-  // カード表示
+    document.getElementById(
+      "card-name"
+    ).innerText =
+      random.name;
 
-  document.getElementById(
-    "tarot-card-view"
-  ).innerHTML =
+    document.getElementById(
+      "card-orientation"
+    ).innerText =
+      reversed
+      ? "逆位置"
+      : "正位置";
 
-  `
-    <div class="moon-symbol">
-      ${card.symbol}
-    </div>
-  `;
+    document.getElementById(
+      "card-message"
+    ).innerText =
+      random.message;
 
-  // 名前
+    document.getElementById(
+      "love"
+    ).innerText =
+      random.love;
 
-  document.getElementById(
-    "tarot-name"
-  ).innerText =
+    document.getElementById(
+      "work"
+    ).innerText =
+      random.work;
 
-    `🔮 ${card.name}`;
+    document.getElementById(
+      "money"
+    ).innerText =
+      random.money;
 
-  // 本文
-
-  document.getElementById(
-    "tarot-main"
-  ).innerText =
-
-    card.main;
-
-  // 恋愛
-
-  document.getElementById(
-    "love"
-  ).innerText =
-
-    card.love;
-
-  // 仕事
-
-  document.getElementById(
-    "work"
-  ).innerText =
-
-    card.work;
-
-  // メッセージ
-
-  document.getElementById(
-    "message"
-  ).innerText =
-
-    card.message;
-
-  // スクロール
-
-  setTimeout(() => {
-
-    result.scrollIntoView({
-
+    document.getElementById(
+      "tarot-result"
+    ).scrollIntoView({
       behavior: "smooth"
     });
+  };
 
-  }, 300);
+  tarotArea.appendChild(card);
 }
