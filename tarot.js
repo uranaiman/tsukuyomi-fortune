@@ -201,9 +201,54 @@ const tarotCards = [
 ];
 
 const tarotArea =
-  document.getElementById("tarot-cards");
+  document.getElementById(
+    "tarot-cards"
+  );
+
+const shuffleBtn =
+  document.getElementById(
+    "shuffle-btn"
+  );
 
 let alreadySelected = false;
+
+let shuffled = false;
+
+/* =========================
+   シャッフル
+========================= */
+
+shuffleBtn.onclick = () => {
+
+  if (shuffled) return;
+
+  shuffled = true;
+
+  shuffleBtn.innerText =
+    "🌙 シャッフル中...";
+
+  tarotArea.classList.add(
+    "shuffling"
+  );
+
+  setTimeout(() => {
+
+    tarotArea.classList.remove(
+      "shuffling"
+    );
+
+    tarotArea.style.height =
+  "auto";
+
+    shuffleBtn.style.display =
+      "none";
+
+  }, 3000);
+};
+
+/* =========================
+   カード生成
+========================= */
 
 for (let i = 0; i < 22; i++) {
 
@@ -224,6 +269,15 @@ for (let i = 0; i < 22; i++) {
 
     if (alreadySelected) return;
 
+    if (!shuffled) {
+
+      alert(
+        "先にカードを混ぜてください"
+      );
+
+      return;
+    }
+
     alreadySelected = true;
 
     const random =
@@ -237,7 +291,32 @@ for (let i = 0; i < 22; i++) {
     const reversed =
       Math.random() < 0.5;
 
-    card.classList.add("opened");
+    /* 他カード暗転 */
+
+    const allCards =
+      document.querySelectorAll(
+        ".tarot-card"
+      );
+
+    allCards.forEach(c => {
+
+      if (c !== card) {
+
+        c.classList.add(
+          "fade-card"
+        );
+      }
+    });
+
+    /* 選択カード */
+
+    card.classList.add(
+      "selected-card"
+    );
+
+    card.classList.add(
+      "opened"
+    );
 
     if (reversed) {
 
@@ -252,6 +331,8 @@ for (let i = 0; i < 22; i++) {
         ${random.symbol}
       </div>
       `;
+
+    /* 結果表示 */
 
     document.getElementById(
       "tarot-result"
@@ -294,9 +375,12 @@ for (let i = 0; i < 22; i++) {
     ).innerText =
       random.money;
 
+    /* スクロール */
+
     document.getElementById(
       "tarot-result"
     ).scrollIntoView({
+
       behavior: "smooth"
     });
   };

@@ -1377,3 +1377,273 @@ button:hover {
     font-size: 42px;
   }
 }
+
+/* =========================
+   シャッフル
+========================= */
+
+.shuffle-btn {
+
+  margin-bottom: 40px;
+
+  padding: 18px 40px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5b21b6,
+      #7e22ce
+    );
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 25px rgba(180,0,255,0.4);
+
+  transition: 0.3s;
+}
+
+.shuffle-btn:hover {
+
+  transform:
+    scale(1.05);
+}
+
+/* シャッフル中 */
+
+/* =========================
+   神秘シャッフル演出
+========================= */
+
+.tarot-grid {
+
+  position: relative;
+}
+
+/* シャッフル中 */
+
+.shuffling {
+
+  height: 420px;
+}
+
+/* カード共通 */
+
+.shuffling .tarot-card {
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  margin-left: -45px;
+  margin-top: -80px;
+
+  animation:
+    orbitShuffle 3s ease-in-out infinite;
+
+  transition: 0.5s;
+}
+
+/* カードごとに円形配置 */
+
+.shuffling .tarot-card:nth-child(1) {
+
+  animation-delay: 0s;
+}
+
+.shuffling .tarot-card:nth-child(2) {
+
+  animation-delay: 0.1s;
+}
+
+.shuffling .tarot-card:nth-child(3) {
+
+  animation-delay: 0.2s;
+}
+
+.shuffling .tarot-card:nth-child(4) {
+
+  animation-delay: 0.3s;
+}
+
+.shuffling .tarot-card:nth-child(5) {
+
+  animation-delay: 0.4s;
+}
+
+.shuffling .tarot-card:nth-child(6) {
+
+  animation-delay: 0.5s;
+}
+
+.shuffling .tarot-card:nth-child(7) {
+
+  animation-delay: 0.6s;
+}
+
+.shuffling .tarot-card:nth-child(8) {
+
+  animation-delay: 0.7s;
+}
+
+.shuffling .tarot-card:nth-child(9) {
+
+  animation-delay: 0.8s;
+}
+
+.shuffling .tarot-card:nth-child(10) {
+
+  animation-delay: 0.9s;
+}
+
+.shuffling .tarot-card:nth-child(11) {
+
+  animation-delay: 1s;
+}
+
+.shuffling .tarot-card:nth-child(12) {
+
+  animation-delay: 1.1s;
+}
+
+.shuffling .tarot-card:nth-child(13) {
+
+  animation-delay: 1.2s;
+}
+
+.shuffling .tarot-card:nth-child(14) {
+
+  animation-delay: 1.3s;
+}
+
+.shuffling .tarot-card:nth-child(15) {
+
+  animation-delay: 1.4s;
+}
+
+.shuffling .tarot-card:nth-child(16) {
+
+  animation-delay: 1.5s;
+}
+
+.shuffling .tarot-card:nth-child(17) {
+
+  animation-delay: 1.6s;
+}
+
+.shuffling .tarot-card:nth-child(18) {
+
+  animation-delay: 1.7s;
+}
+
+.shuffling .tarot-card:nth-child(19) {
+
+  animation-delay: 1.8s;
+}
+
+.shuffling .tarot-card:nth-child(20) {
+
+  animation-delay: 1.9s;
+}
+
+.shuffling .tarot-card:nth-child(21) {
+
+  animation-delay: 2s;
+}
+
+.shuffling .tarot-card:nth-child(22) {
+
+  animation-delay: 2.1s;
+}
+
+/* 円形シャッフル */
+
+@keyframes orbitShuffle {
+
+  0% {
+
+    transform:
+      rotate(0deg)
+      translateX(0px)
+      rotate(0deg)
+      scale(0.8);
+
+    opacity: 0.4;
+  }
+
+  20% {
+
+    transform:
+      rotate(60deg)
+      translateX(120px)
+      rotate(-60deg)
+      scale(1);
+
+    opacity: 1;
+  }
+
+  40% {
+
+    transform:
+      rotate(140deg)
+      translateX(180px)
+      rotate(-140deg)
+      scale(1.05);
+
+    opacity: 1;
+  }
+
+  60% {
+
+    transform:
+      rotate(220deg)
+      translateX(150px)
+      rotate(-220deg)
+      scale(1);
+
+    opacity: 1;
+  }
+
+  80% {
+
+    transform:
+      rotate(300deg)
+      translateX(100px)
+      rotate(-300deg)
+      scale(0.95);
+
+    opacity: 0.9;
+  }
+
+  100% {
+
+    transform:
+      rotate(360deg)
+      translateX(0px)
+      rotate(-360deg)
+      scale(0.8);
+
+    opacity: 0.4;
+  }
+}
+
+/* 他カード暗転 */
+
+.fade-card {
+
+  opacity: 0.15;
+
+  transform:
+    scale(0.92);
+
+  transition: 0.5s;
+}
