@@ -114,6 +114,9 @@ const answersElement =
 const resultElement =
   document.getElementById("result");
 
+  const questionBox =
+  document.getElementById("question-box");
+
 // =====================================
 // 質問表示
 // =====================================
@@ -175,12 +178,9 @@ function showQuestion() {
 
 function showResult() {
 
-  questionElement.style.display =
-    "none";
-
-  answersElement.style.display =
-    "none";
-
+questionBox.style.display =
+  "none";
+  
   let resultType =
     Object.keys(scores).reduce(
       function (a, b) {
