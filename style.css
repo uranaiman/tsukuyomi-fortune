@@ -1647,3 +1647,148 @@ button:hover {
 
   transition: 0.5s;
 }
+/* =========================
+   恋愛タイプ診断
+========================= */
+
+.love-test-section {
+
+  width: 90%;
+  max-width: 700px;
+
+  margin: 60px auto;
+}
+
+.question-box {
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.2);
+
+  border-radius: 24px;
+
+  padding: 40px 30px;
+
+  backdrop-filter: blur(10px);
+
+  text-align: center;
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,0.08);
+}
+
+.answers {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-top: 40px;
+}
+
+.answer-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.04)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.2);
+
+  color: white;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.answer-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(255,255,255,0.16);
+
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.12);
+}
+
+.result-box {
+
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+.love-result {
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.2);
+
+  border-radius: 24px;
+
+  padding: 40px 30px;
+
+  backdrop-filter: blur(10px);
+
+  animation:
+    fadeIn 1s ease;
+}
+
+.result-icon {
+
+  font-size: 4rem;
+
+  margin-bottom: 20px;
+}
+
+.love-result h2 {
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+
+  color: #fff;
+}
+
+.love-result p {
+
+  line-height: 2;
+
+  color: rgba(255,255,255,0.9);
+}
+
+/* スマホ */
+
+@media screen and (max-width: 768px) {
+
+  .question-box,
+  .love-result {
+
+    padding: 30px 20px;
+  }
+
+  .answer-btn {
+
+    font-size: 0.95rem;
+
+    padding: 16px;
+  }
+
+}
