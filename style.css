@@ -930,8 +930,24 @@ button:hover {
 
   body {
 
+    background:
+      linear-gradient(
+        rgba(0,0,0,0.78),
+        rgba(0,0,0,0.92)
+      ),
+      url("images/bg-mobile.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
     background-attachment: scroll;
+
   }
+
+}
 
   h1 {
 
@@ -1035,7 +1051,6 @@ button:hover {
 
     font-size: 24px;
   }
-}
 
 /* ========================================
    星座一覧
